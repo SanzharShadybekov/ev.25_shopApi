@@ -1,4 +1,5 @@
 from rest_framework import permissions
+from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from category import serialziers
@@ -14,3 +15,4 @@ class CategoryViewSet(ModelViewSet):
             return [permissions.AllowAny()]
         else:
             return [permissions.IsAdminUser()]
+
